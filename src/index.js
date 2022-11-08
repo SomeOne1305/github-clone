@@ -7,8 +7,6 @@ import { val } from './context';
 function Apps (){
 
   const [value, setValue] = React.useState("")
-
-
   return(
     <>
  <React.StrictMode>

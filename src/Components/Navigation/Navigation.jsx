@@ -9,6 +9,7 @@ export default function Navigation() {
         window.addEventListener('keydown', (ev)=>{
             if(ev.code === "Enter"){
                 setValue(e.target.value)
+                e.target.value = ""
             }
         })
     }

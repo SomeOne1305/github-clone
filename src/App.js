@@ -3,6 +3,12 @@ import './App.css';
 import Navigation from './Components/Navigation/Navigation';
 import { val } from './context';
 import axios from 'axios';
+import SecondNav from './Components/SecondNav/SecondNav';
+//  https://api.github.com/users/${user_name}
+// https://api.github.com/users/${user_name}/followers
+// https://api.github.com/users/${user_name}/repos
+// https://api.github.com/search/users?q=${user_name}
+
 
 function App() {
   const [value, ] = React.useContext(val)
@@ -10,21 +16,16 @@ function App() {
   React.useEffect(()=>{
     async function getData(){
       let data = await axios.get(`https://api.github.com/search/users?q=${value}`)
-      setUser(data.data)
+      setUser(data.data.items)
     }
     getData()
   },[value])
-  console.log(value);
+
+
   return (
     <div className="App">
       <Navigation/>
-      {
-      user.map(item=>{
-        return(
-          <img src={item.avatar_url} alt=""/>
-        )
-      })
-    }
+      <SecondNav/>
     </div>
   );
 }
