@@ -12,7 +12,7 @@ function Apps (){
     <>
  <React.StrictMode>
     <val.Provider value={[value, setValue]}>
-         <App />
+        <App />
     </val.Provider>
   </React.StrictMode>
     </>

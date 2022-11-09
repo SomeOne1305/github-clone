@@ -18,14 +18,6 @@ export default function Search() {
     getData()
   }, [value])
 
-  const [repos, setRepos] = React.useState([])
-  React.useEffect(() => {
-    async function getRepos() {
-      let reposit = await axios.get(`https://api.github.com/users/${value}/repos`)
-      setRepos(reposit)
-    }
-    getRepos()
-  })
   return (
     <div className='Block'>
       {
@@ -34,7 +26,7 @@ export default function Search() {
       <div className="popular">
         {
           <Routes>
-            <Route path={`/${value}/repos`} element={<Repository/>}/>
+            <Route path={`/repos`} element={<Repository/>}/>
           </Routes>
         }
       </div>
