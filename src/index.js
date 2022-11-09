@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { val } from './context';
+import { BrowserRouter } from 'react-router-dom';
 
 function Apps (){
 
-  const [value, setValue] = React.useState("")
+  const [value, setValue] = React.useState("SomeOne1305")
   return(
     <>
  <React.StrictMode>
@@ -14,7 +15,6 @@ function Apps (){
          <App />
     </val.Provider>
   </React.StrictMode>
-    
     </>
   )
  }
@@ -23,5 +23,7 @@ function Apps (){
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <Apps/>
-);
+  <BrowserRouter>
+    <Apps/>
+  </BrowserRouter>
+  );

@@ -3,15 +3,12 @@ import './navigation.css'
 import { val } from '../../context'
 
 export default function Navigation() {
-
     const [, setValue] = React.useContext(val)
     function getValue(e){
-        window.addEventListener('keydown', (ev)=>{
-            if(ev.code === "Enter"){
-                setValue(e.target.value)
-                e.target.value = ""
-            }
-        })
+        if(e.code === "Enter"){
+            setValue(e.target.value)
+            e.target.value = ""
+        }
     }
     return (
         <nav>
@@ -20,7 +17,7 @@ export default function Navigation() {
                     <i className="fa-brands fa-github"></i>
                 </div>
                 <div className="search">
-                    <input type="text" placeholder='Search or jump to...' onInput={e => getValue(e)} />
+                    <input type="text" placeholder='Search or jump to...' onKeyDown={e => getValue(e)} />
                     <span>/</span>
                 </div>
                 <ul>
