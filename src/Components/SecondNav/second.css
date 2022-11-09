@@ -10,20 +10,36 @@
     height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 .secondnav-navbar ul{
     width: 70%;
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     border: 1px solid red;
 }
 
 .secondnav-navbar ul li{
     list-style-type: none;
-    padding: 10px 15px;
-    color: gray;
+    padding: 5px;
+    margin: 0 15px;
+    color: #111;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
-
+.secondnav-navbar ul li:hover{
+    background-color: #F0F2F4;
+}
+.secondnav-navbar ul li span{
+    margin-left: 5px;
+}
+@media (max-width:1216px){
+    
+    .secondnav-navbar{
+        width:100%;
+    }
+}

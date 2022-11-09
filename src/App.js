@@ -4,6 +4,7 @@ import Navigation from './Components/Navigation/Navigation';
 import { val } from './context';
 import axios from 'axios';
 import SecondNav from './Components/SecondNav/SecondNav';
+import User from './Components/User/User';
 //  https://api.github.com/users/${user_name}
 // https://api.github.com/users/${user_name}/followers
 // https://api.github.com/users/${user_name}/repos
@@ -26,6 +27,15 @@ function App() {
     <div className="App">
       <Navigation/>
       <SecondNav/>
+      <div className='Hello'>
+        {
+          user.map((item)=>{
+            return(
+              <User key={item.login} img={item.avatar_url} name={item.login}/>
+            )
+          })
+        }
+      </div>
     </div>
   );
 }
