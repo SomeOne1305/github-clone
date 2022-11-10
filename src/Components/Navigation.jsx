@@ -1,6 +1,8 @@
 import React from 'react'
-import './navigation.css'
-import { val } from '../../context'
+import github from '../main.module.css'
+import { val } from '../context'
+
+
 
 export default function Navigation() {
     const [, setValue] = React.useContext(val)
@@ -12,11 +14,11 @@ export default function Navigation() {
     }
     return (
         <nav>
-            <div className="part">
-                <div className="logo">
+            <div className={github.part}>
+                <div className={github.logo}>
                     <i className="fa-brands fa-github"></i>
                 </div>
-                <div className="search">
+                <div className={github.search}>
                     <input type="text" placeholder='Search or jump to...' onKeyDown={e => getValue(e)} />
                     <span>/</span>
                 </div>
@@ -27,12 +29,12 @@ export default function Navigation() {
                     <li>Explore</li>
                 </ul>
             </div>
-            <div className="part2">
-                <i className="fa-regular fa-bell icon"></i>
-                <div className="add">
+            <div className={github.part2}>
+                <i className={`fa-regular fa-bell ${github.icon}`}></i>
+                <div className={github.add}>
                     <i className="fa fa-plus"></i>
                 </div>
-                <div className="profile">
+                <div className={github.profile}>
                 </div>
             </div>
         </nav>

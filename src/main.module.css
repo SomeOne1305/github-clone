@@ -1,0 +1,337 @@
+nav{
+    width: 100%;
+    height: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    background-color: #24292F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.part{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+}
+.logo:hover{
+    color: #BDBFC1;
+}
+
+.search{
+    width: auto;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 2px 0px #fff;
+    margin-left: 20px;
+}
+
+.search input{
+    width: 240px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    transition: 0.2s linear;
+}
+
+.search input::placeholder{
+    font-size: 14px;
+    color: #ACC9BE;
+}
+
+.search input:focus{
+    width: 350px;
+    background-color: #fff;
+    color: #000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.search input:focus::placeholder{
+    color: black;
+}
+.search input:focus ~ span{
+    display: none;
+}
+
+.search span{
+    height: 17px;
+    width: 17px;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(163, 163, 163);
+    box-shadow: 0 0 1px 0 #fff;
+    user-select: none;
+    margin-right: 5px;
+}
+
+nav .part ul{
+    display: flex;
+}
+
+nav .part ul li{
+    list-style: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+nav .part ul li:hover{
+    color: gray;
+}
+
+.part2{
+    display: flex;
+    align-items: center;
+}
+
+.part2 .icon{
+    color: #fff;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.add{
+    margin-left: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.add::after{
+    content: '\f0d7';
+    font-family: FontAwesome;
+    color:#fff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.add:hover, .icon:hover{
+    color: gray;
+}
+.add:hover::after{
+    color: gray;
+}
+
+.profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png);
+    background-size: 100%;
+    background-position: center;
+    background-color: #fff;
+    margin-left: 15px;
+}
+/* ////////////////////////////////// */
+
+.SecondNav{
+    width: 100%;
+    height: 60px;
+    margin-top: 60px;
+    border-bottom: 2px solid gray;
+}
+
+.secondnavNavbar{
+    width: 1216px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.secondnavNavbar ul{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.secondnavNavbar ul li{
+    list-style-type: none;
+    padding: 5px;
+    margin: 0 15px;
+    color: #111;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.secondnavNavbar ul li:hover{
+    background-color: #d2d2d2;
+}
+.secondnavNavbar ul li span{
+    margin-left: 5px;
+}
+
+.container{
+    width: 1216px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: 1px solid red;
+}
+
+
+/* //////////////////////////////////// */
+
+
+.card{
+    height: 410px;
+    margin-top: -30px;
+    border: 1px solid red;
+}
+
+.userImage{
+    width: 295px;
+    height: 295px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.userImage img{
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.userName{
+    font-size: 19px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.userInt{
+    margin-top: 15px;
+}
+
+.userInt i{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.userInt a{
+    text-decoration: none;
+    color: #000;
+}
+.userInt a span{
+    font-weight: 600;
+}
+
+.userInt a:hover{
+    color: rgb(8, 120, 225);
+}
+
+.follow{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    border: 1px solid #afafac;
+    background-color: #e2e2de;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* /////////////////////////////////////// */
+
+
+.Repos{
+    width: 100%;
+}
+
+.ReposCard{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top:1px solid rgb(189, 187, 187);
+    margin-top: 10px;
+}
+
+.Line{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first{
+    display: flex;
+    align-items: center;
+}
+
+.reposName{
+    font-size: 18px;
+    color: rgb(0, 115, 255);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.reposName:hover{
+    text-decoration: underline;
+}
+
+.type{
+    font-size: 10px;
+    color: gray;
+    border-radius: 10px;
+    padding: 1px 3px;
+    margin-left: 10px;
+    border: 1px solid rgb(185, 184, 184);
+}
+
+.star{
+    width: 90px;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: 1px solid rgb(185, 184, 184);
+}
+
+.st{
+    width: 70%;
+}
+.slideDown{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #000;
+}
+.Line:nth-of-type(2){
+    margin-top: 15px;
+    justify-content: start;
+}
+.Language{
+    color: gray;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.indicator{
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: var(--clr);
+    margin-left: 15px;
+}
+@media (max-width:1216px){
+    
+    .secondnavNavbar, .container{
+        width:100%;
+    }
+}
