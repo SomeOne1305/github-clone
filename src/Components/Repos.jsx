@@ -19,7 +19,7 @@ export default function Repos() {
             {
                 repos.map(item => {
                     return (
-                        <div className={github.ReposCard}>
+                        <div key={item.node_id} className={github.ReposCard}>
                             <div className={github.Line}>
                                 <div className={github.first}>
                                     <h3 className={github.reposName}>{item.name}</h3>
@@ -36,7 +36,7 @@ export default function Repos() {
                                 </div>
                             </div>
                             <div className={github.Line}>
-                                <p className={github.indicator} style={{ '--clr': "green" }}></p>
+                                <p className={github.indicator} style={{'--clr':'red'}}></p>
                                 <span className={github.Language}>{item.language}</span>
                             </div>
                         </div>

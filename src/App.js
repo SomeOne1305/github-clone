@@ -6,7 +6,9 @@ import github from './main.module.css'
 import { val } from './context';
 import axios from 'axios';
 import Repos from './Components/Repos';
-import {Routes, Route} from 'react-router-dom' 
+import {Routes, Route, Link} from 'react-router-dom'
+import Followers from './Components/Followers';
+import Following from './Components/Following'
 
 //  https://api.github.com/users/${user_name}
 // https://api.github.com/users/${user_name}/followers
@@ -37,14 +39,20 @@ function App() {
           <span className={github.userName}>{userData.login}</span>
           <p className={github.follow}>Follow</p>
           <div className={github.userInt}>
-            <i class="fa-regular fa-users"></i>
-            <a href=''><span>{userData.followers}</span> followers</a>
+            <Link to={'/followers'}>
+            <i className="fa-regular fa-users"></i>
+            <span>{userData.followers} </span> <span>followers</span>
+            </Link>
             <span> · </span>
-            <a href=''><span>{userData.following}</span> following</a>
+            <Link to={'/followings'}>
+            <span>{userData.following} </span> following
+            </Link>
           </div>
         </div>
         <Routes>
           <Route path='/repos' element={<Repos/>}/>
+          <Route path='/followers' element={<Followers/>}/>
+          <Route path='/followings' element={<Following/>}/>
         </Routes>
       </div>
     </div>
